@@ -1,0 +1,15 @@
+@mixin fa-color($color-name, $color) {
+  .fa-ios-#{$color-name} {
+    color: $color;
+  }
+  .fa-md-#{$color-name} {
+    color: $color;
+  }
+  .fa-wp-#{$color-name} {
+    color: $color;
+  }
+}
+
+@each $color-name, $color-base, $color-contrast in get-colors($colors) {
+  @include fa-color($color-name, $color-base);
+}
