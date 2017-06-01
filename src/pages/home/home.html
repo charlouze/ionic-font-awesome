@@ -1,14 +1,63 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Ionic & Font Awesome
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-card>
+    <ion-card-header>Basic Icons</ion-card-header>
+    <ion-card-content>
+      <fa-icon [name]="icon"></fa-icon>
+      fa-{{icon}}
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>Colored Icons</ion-card-header>
+    <ion-card-content>
+      <fa-icon [name]="icon" [color]="color" size="3x"></fa-icon>
+      {{color}}
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>Larger Icons</ion-card-header>
+    <ion-card-content>
+      <fa-icon [name]="icon" [size]="size"></fa-icon>
+      fa-{{size}}
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>Fixed Width Icons</ion-card-header>
+    <ion-card-content>
+      <fa-icon name="home" fixed-width></fa-icon>
+      Home
+    </ion-card-content>
+    <ion-card-content>
+      <fa-icon name="book" fixed-width></fa-icon>
+      Library
+    </ion-card-content>
+    <ion-card-content>
+      <fa-icon name="pencil" fixed-width></fa-icon>
+      Applications
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>Additional class</ion-card-header>
+    <ion-card-content>
+      <fa-icon name="circle-o-notch" class="fa-spin" size="2x"></fa-icon>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>Without using a component</ion-card-header>
+    <ion-card-content>
+      <ul class="fa-ul">
+        <li><i class="fa-li fa fa-check-square"></i>List icons</li>
+        <li><i class="fa-li fa fa-check-square"></i>can be used</li>
+        <li><i class="fa-li fa fa-spinner fa-spin"></i>as bullets</li>
+        <li><i class="fa-li fa fa-square"></i>in lists</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
